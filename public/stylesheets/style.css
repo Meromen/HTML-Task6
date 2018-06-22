@@ -1,0 +1,240 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+#calculator * {
+  font-size: 16px;
+}
+
+#calculator table {
+  border: solid 3px silver;
+  border-spacing: 3px;
+  background-color: #EEE;
+}
+
+#calculator table td {
+  border-spacing: 3px;
+}
+
+.History{width: 254px;
+  resize: none;
+}
+
+input.display {width: 256px;
+  text-align: right;
+}
+td.buttons {
+  border-top: solid 1px silver;
+}
+input[type= button] {
+  width: 40px;
+  height: 30px;
+}
+
+.link {
+  stroke: #000;
+  stroke-width: 1.5px;
+}
+
+.node {
+  cursor: move;
+  fill: #ccc;
+  stroke: #000;
+  stroke-width: 1.5px;
+}
+
+.node.fixed {
+  fill: #f00;
+}
+
+text{
+  color : black;
+  font-size: 12px;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.img-container {
+  margin-bottom: 10px;
+  margin-right: 25px;
+  padding-left: 10px;
+  float: left;
+}
+
+.ansarea {
+  resize: none;
+}
+
+.inputv{
+  visibility: hidden;
+}
+.svg{
+  height: 400px;
+  width: 1000px;
+}
+
+.JStasks{
+
+  margin: 10px;
+  padding: 10px;
+}
+
+@media print {
+  .not-printable, img {
+    display: none;
+  }
+  .block-content {
+    width: 100%;
+  }
+  #poem-content {
+    width: 80%;
+    margin-left: 15%;
+    display: inline-block;
+  }
+}
+
+.first-task{
+  border-style: double;
+  border-color: black;
+  border-width: 1px;
+  width: 30%;
+}
+
+.second-task{
+  border-style: double;
+  border-color: black;
+  border-width: 1px;
+  width: 50%;
+}
+
+.third-task{
+  border-style: double;
+  border-color: black;
+  border-width: 1px;
+  width: 30%;
+}
+
+.matrixelms{
+  width: 40px;
+}
+
+.img-wrapper {
+  text-align: justify;
+  padding-right: 10px;
+}
+
+.head {
+  margin-bottom: 1em;
+  width: 100%;
+  background-color: #4fba2f;
+  border-style: double;
+  border-color: #25216b;
+  border-width: 1px;
+  border-radius: 10px;
+}
+
+.page {
+  display: block;
+  width: 90%;
+  margin: 0 auto;
+  border-style: double;
+  border-color: #25216b;
+  border-width: 1px;
+  background-color: #4fba2f;
+  border-radius: 0 20px;
+}
+
+.block-content {
+  display: inline-block;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.block-text-content{
+  padding-left: 7px;
+  padding-bottom: 7px;
+}
+
+.block-content > h3 {
+  text-align: center;
+  margin-top: 0;
+}
+
+.menu {
+  position: relative;
+  display: inline-block;
+  padding-left: 10px;
+}
+
+.menu .menu-item-name {
+  margin: 0;
+  padding: 0;
+}
+
+.menu-item > .menu-items {
+  display: none;
+  position: absolute;
+  background-color: #66ba1c;
+  min-width: 100px;
+  box-shadow: 0px 8px 16px 0px rgba(57, 15, 59, 0.2);
+  margin-left: 10px;
+  padding: 12px 16px;
+  z-index: 1;
+  border-radius: 10px;
+  border-style: solid;
+  border-color: #25216b;
+  border-width: 1px;
+}
+.menu-item:hover > .menu-items {
+  display: block;
+}
+.empty{
+  width: auto ;
+  height: auto ;
+}
+.menu-item {
+  white-space: nowrap;
+  background: none;
+  cursor: default;
+}
+
+.menu-item:hover {
+  background-color: #4fba2f;
+  cursor: pointer;
+  border-style: double;
+  border-color: #25216b;
+  border-width: 1px;
+  border-radius: 5px;
+}
+
+#poem-content {
+  width: 80%;
+  margin-left: 15%;
+  display: inline-block;
+}
+
+h2, a, h3 {
+  text-align: center;
+  color: #091605;
+  margin-top: 0;
+}
+
+p {
+  padding-left: 10px;
+}
+
+code {
+  display: block;
+  white-space: pre-wrap
+}
+
+hr {
+  color: #4fba2f;
+}

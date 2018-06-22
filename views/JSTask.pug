@@ -1,0 +1,60 @@
+extends layout
+
+block content
+    div.block-content
+        .JStasks
+            script(src='javascripts/JSTasks.js')
+            .first-task
+                div
+                    select#SPicker(name='Spicker', onchange='ChangeS()')
+                        option выберите фигуру
+                        option(value='Квадрат') Квадрат
+                        option(value='Круг') Круг
+                        option(value='Треугольник') Треугольник
+                        option(value='Трапеция') Трапеция
+                        option(value='Параллелограмм') Параллелограмм
+                        option(value='Эллипс') Эллипс
+                    button(onclick='Digit()') Расчитать
+                div
+                    p#A.inputv
+                        | Сторона А
+                        input#Av(type='number', name='A', value='')
+                div
+                    p#B.inputv
+                        | Сторона B
+                        input#Bv(type='number', name='B', value='')
+                div
+                    p#H.inputv
+                        | Высота
+                        input#Hv(type='number', name='H', value='')
+                div
+                    p#Radius.inputv
+                        | Радиус
+                        input#Rv(type='number', name='R', value='')
+            .second-task
+                p
+                    | Ряд простых чисел до
+                    input#SimlpleChk(type='number', name='SimlpleChk', value='1')
+                    button(onclick='findsimple()') Проверить
+                    br
+                    textarea#AnsLabel.ansarea(rows='7', cols='100', readonly='true')
+                    div
+                        #ans
+            .third-task
+                input#00matrixelm.matrixelms(type='number', name='00matrixelm', value='1')
+                input#01matrixelm.matrixelms(type='number', name='01matrixelm', value='1')
+                input#02matrixelm.matrixelms(type='number', name='02matrixelm', value='1')
+                input#03matrixelm.matrixelms(type='number', name='03matrixelm', value='1')
+                br
+                input#10matrixelm.matrixelms(type='number', name='10matrixelm', value='1')
+                input#11matrixelm.matrixelms(type='number', name='11matrixelm', value='1')
+                input#12matrixelm.matrixelms(type='number', name='12matrixelm', value='1')
+                input#13matrixelm.matrixelms(type='number', name='13matrixelm', value='1')
+                br
+                input#20matrixelm.matrixelms(type='number', name='20matrixelm', value='1')
+                input#21matrixelm.matrixelms(type='number', name='21matrixelm', value='1')
+                input#22matrixelm.matrixelms(type='number', name='22matrixelm', value='1')
+                input#23matrixelm.matrixelms(type='number', name='23matrixelm', value='1')
+                button(onclick='MatrixMatch()') Расчитать
+                br
+                textarea#AnsLabelmatix.ansarea(rows='4', cols='24', readonly='true')

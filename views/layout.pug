@@ -1,0 +1,40 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    div.container
+      div.head
+        h2 My page
+        div.menu.not-printable
+          div.menu-item
+            p.menu-item-name Menu
+            div.menu-items
+              div.menu-item
+                p.menu-item-name
+                  a(href="/") MainPage
+              div.menu-item
+                p.menu-item-name Creation
+                div.menu-items
+                  div.menu-item
+                    p.menu-item-name
+                      a(href="/Poem") Poem
+                  div.menu-item
+                    p.menu-item-name
+                      a(href="/About") About me
+              div.menu-item
+                p.menu-item-name Coding
+                div.menu-items
+                  div.menu-item
+                    p.menu-item-name
+                      a(href="/Math")  Math + SVG
+                  div.menu-item
+                    p.menu-item-name
+                      a(href="/JSTask") JS-task
+                  div.menu-item
+                    p.menu-item-name
+                      a(href="/Calculator") Calculator
+
+    div.page
+      block content

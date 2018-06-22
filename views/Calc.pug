@@ -1,0 +1,42 @@
+extends layout
+
+block content
+    div.block-content
+        form#calculator(name='calc')
+            table
+                tr
+                    td
+                        input#InputDis.display(type='text', name='InputDis', size='16')
+                tr
+                    td.buttons
+                        input(type='button', name='one', value='1', onclick='NumInput(calc.one.value)')
+                        input(type='button', name='two', value='2', onclick='NumInput(calc.two.value)')
+                        input(type='button', name='three', value='3', onclick='NumInput(calc.three.value)')
+                        input(type='button', name='plus', value='+', onclick='NumInput(calc.plus.value)')
+                        input(type='button', name='add', value='ln', onclick='LN(calc.InputDis.value)')
+                        input(type='button', name='MPlus', value='M+', onclick='MemPlus(calc.InputDis.value)')
+                        br
+                        input(type='button', name='four', value='4', onclick='NumInput(calc.four.value)')
+                        input(type='button', name='five', value='5', onclick='NumInput(calc.five.value)')
+                        input(type='button', name='six', value='6', onclick='NumInput(calc.six.value)')
+                        input(type='button', name='sub', value='-', onclick='NumInput(calc.sub.value)')
+                        input(type='button', name='add', value='sin', onclick='Sin(calc.InputDis.value)')
+                        input(type='button', name='MMinus', value='M-', onclick='MemMinus(calc.InputDis.value)')
+                        br
+                        input(type='button', name='seven', value='7', onclick='NumInput(calc.seven.value)')
+                        input(type='button', name='eight', value='8', onclick='NumInput(calc.eight.value)')
+                        input(type='button', name='nine', value='9', onclick='NumInput(calc.nine.value)')
+                        input(type='button', name='mul', value='*', onclick='NumInput(calc.mul.value)')
+                        input(type='button', name='add', value='cos', onclick='Cos(calc.InputDis.value)')
+                        input#MIBut(type='button', name='MInput', value='MI', onclick='MemInput()')
+                        br
+                        input(type='button', name='clear', value='c', onclick="calc.InputDis.value = ''")
+                        input(type='button', name='zero', value='0', onclick='NumInput(calc.zero.value)')
+                        input(type='button', name='doit', value='=', onclick='Equal(calc.InputDis.value)')
+                        input(type='button', name='div', value='/', onclick='NumInput(calc.div.value)')
+                        input(type='button', name='point', value='.', onclick='NumInput(calc.point.value)')
+                        input#MDBut(type='button', name='MDel', value='MD', onclick='MemDel()')
+                tr
+                    td
+                        textarea#History.History(width='210px', readonly='true')
+        script(src='javascripts/CalcSCript.js')
