@@ -58,3 +58,17 @@ block content
                 button(onclick='MatrixMatch()') Расчитать
                 br
                 textarea#AnsLabelmatix.ansarea(rows='4', cols='24', readonly='true')
+            .forth-task
+                form(onsubmit="return getSnakeMatrix()")
+                    label Размерность матрицы
+                    input#task4-size(type='number', min='2', max='16', step='1', value='8', placeholder='Размерность матрицы')
+                    br
+                    label Минимальный элемент
+                    input#task4-min(type='number', min='-100', max='100', value='-50', step='1', placeholder='Минимальный элемент')
+                    br
+                    label Максимальный элемент
+                    input#task4-max(type='number', min='-100', max='100', step='1', value='50', placeholder='Максимальный элемент')
+                    br
+                    input(type='button', value='Output', onclick='getSnakeMatrix()')
+                pre#task4-result
+

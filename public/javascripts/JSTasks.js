@@ -164,3 +164,69 @@ function MatrixMatch(){
 	document.getElementById('AnsLabelmatix').value += '\n';		
 	}
 }
+
+
+function getRandomInt(min, max) {
+    return min + Math.round(Math.random()*(max-min));
+}
+function getArray(n, min, max) {
+    let result = [];
+    for (let i = 0; i < n; ++i) {
+        result.push(getRandomInt(min, max));
+    }
+    return result;
+}
+function getResultArray(a) {
+    return a.sort((a, b) => {
+        return parseFloat(a)-parseFloat(b);
+    });
+}
+
+function showMatrix(matrix, domElem) {
+    let cellSize = Math.max.apply(null, matrix.map(row => {
+        return Math.max.apply(null, row.map(value => {
+            return value.toString().length;
+        })) + 1;
+    }));
+    for (let i = 0; i < matrix.length; ++i) {
+        for (let j = 0; j < matrix[i].length; ++j) {
+            let content = matrix[i][j] + " ";
+            while (content.length < cellSize) {
+                content = " " + content;
+            }
+            domElem.textContent += content;
+        }
+        domElem.textContent += "\r\n";
+    }
+}
+
+function getSnakeMatrix() {
+    let output = document.getElementById("task4-result");
+    output.textContent = "";
+    let size = document.getElementById("task4-size").value;
+    if (size < 2 ) {
+        output.textContent = "Некорректный размер матрицы!";
+        return false;
+    }
+    let arrMin = document.getElementById("task4-min").value;
+    let arrMax = document.getElementById("task4-max").value;
+
+    let numbers = getResultArray(getArray(size*size, Math.min(arrMin, arrMax), Math.max(arrMin, arrMax)));
+    let result = new Array(size);
+    let step = -1;
+    let j = size-1;
+
+    for (let i = size-1; i >= 0; --i) {
+        result[i] = new Array(size);
+        while (j >= 0 && j <= size-1) {
+            result[i][j] = numbers.shift();
+            j += step;
+        }
+        step = -step;
+        j = Math.min(j, size-1);
+        j = Math.max(j, 0);
+    }
+
+    showMatrix(result, output);
+    return false;
+}
