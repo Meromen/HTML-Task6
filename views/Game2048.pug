@@ -1,0 +1,14 @@
+extends layout
+
+block content
+    div.block-content
+        h1 2048
+            p#score
+            #size-bloc
+                p#size-title Size :
+                input#size(type="number" value="4")
+                input#change-size(type="button" value="Ok")
+                .clear
+            #canvas-block
+                canvas#canvas(width="500" height="500")
+            script(src="javascripts/Game2048.js")

@@ -1,0 +1,12 @@
+extends layout
+
+block content
+    div.block-content
+        canvas#canvas(width="800" height="600" onmousemove="moveTheGun(event)" onclick="shoot(event)")
+        form
+            input(type="button" onclick="move()" value="Start")
+            input(type="button" onclick="init()" value="Инициализация")
+        p#level
+        p#point
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/mootools/1.6.0/mootools-core.js")
+        script(src="javascripts/GunGame.js")

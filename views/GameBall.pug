@@ -1,0 +1,19 @@
+extends layout
+
+block content
+    div.block-content
+        canvas#canvas(width="600" height="400" onclick="goInput(event);")
+        form
+            input(type="button" value="Движение" onclick="move()")
+            input(type="button" value="Стоп" onclick="stop()")
+            input(type="button" value="Скорость+" onclick="speedInc()")
+            input(type="button" value="Скорость-" onclick="speedDec()")
+            input(type="button" value="Вправо" onclick="directionRight()")
+            input(type="button" value="Влево" onclick="directionLeft()")
+            input(type="button" value="Вверх" onclick="directionTop()")
+            input(type="button" value="Вниз" onclick="directionBottom()")
+            input(type="button" value="Наугад" onclick="random()")
+            input(type="button" value="Инициализация" onclick="init()")
+
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/mootools/1.6.0/mootools-core.js")
+        script(src="javascripts/GameBall.js")

@@ -29,4 +29,20 @@ router.get('/JQueryTask', function(req, res, next) {
 router.get('/Calculator', function(req, res, next) {
     res.render('Calc', { title: 'Calculator' });
 });
+
+router.get('/GameBall', function(req, res, next) {
+    res.render('GameBall', { title: 'Ball Game' });
+});
+
+router.get('/GunGame', function(req, res, next) {
+    res.render('GameGun', { title: 'Gun Game' });
+});
+
+router.get('/Calendar', function(req, res, next) {
+    res.render('Calendar', { title: 'Calendar' });
+});
+
+router.get('/Game2048', function(req, res, next) {
+    res.render('Game2048', { title: '2048' });
+});
 module.exports = router;
