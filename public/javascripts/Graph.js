@@ -1,4 +1,4 @@
-var width = 1920,
+var width = 1200,
     height = 1080;
 
 var force = d3.layout.force()
@@ -10,7 +10,7 @@ var force = d3.layout.force()
 var drag = force.drag()
     .on("dragstart", dragstart);
 
-var svg = d3.select("body").append("svg")
+var svg = d3.select("#graph").append("svg")
     .attr("width", width)
     .attr("height", height);
 
